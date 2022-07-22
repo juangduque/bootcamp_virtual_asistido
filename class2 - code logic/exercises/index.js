@@ -35,7 +35,17 @@ switch (option_menu) {
 				break;
 
 		case "3":
-
+				alert("Calcula el promedio de las notas de un estudiante");
+				let note1 = parseInt(prompt("Ingresa la nota 1 (entre 1 y 5)"));
+				let note2 = parseInt(prompt("Ingresa la nota 2 (entre 1 y 5)"));
+				let note3 = parseInt(prompt("Ingresa la nota 3 (entre 1 y 5)"));
+				const result = (note1 + note2 + note3) / 3;
+				if(result < 3){
+						alert("El estudiante va perdiendo con: " + result);
+				}else{
+						alert("El estudiante va pasando con: " + result);
+				}
+				break;
 
 		default:
 				alert("Opción no valida");
