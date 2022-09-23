@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fundamentals';
+  person = {
+    name: "Juan",
+    address: "Cll falsa # 123",
+    age: 20
+  }
+
+  property = "date"
+
+  onClick(){
+    alert("he sido clickeado");
+  }
 }
