@@ -6,16 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fundamentals';
+  property: string = "file";
+  name: string = "";
+  animal: string = "dog"
+
   person = {
-    name: "Juan",
-    address: "Cll falsa # 123",
-    age: 20
+    name: "Nicolas",
+    age: 20,
+    address: "cll falsa # 123"
   }
 
-  property = "date"
+  fruits = [ "apple", "kiwi", "banana", "watermelon"]
 
-  onClick(){
-    alert("he sido clickeado");
-  }
+  onClick() {
+    alert("the button was clicked")
+  };
 }

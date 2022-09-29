@@ -1,10 +1,61 @@
-<h1>Hola mundo</h1>
+<!-- <h1>Hola mundo</h1> -->
 
-<!-- Data binding -->
-<h2>{{ person.name }}</h2>
+<!-- String interpolation -->
+<!-- <h2>{{ person.name }}</h2> -->
 
 <!-- Property binding -->
-<input [type]="property">
+<!-- <input [type]="property"> -->
 
 <!-- Event binding -->
+<!-- <button (click)="onClick()">Click me</button> -->
+
+<h1>String interpolation</h1>
+<h2>3 + 3 = {{ 3 + 3 }} {{ animal }}</h2>
+
+<h1>Property binding</h1>
+<input [type]="property" value="boton">
+
+<h1>Event binding</h1>
 <button (click)="onClick()">Click me</button>
+
+<h1>Ng Model</h1>
+<div>
+  <p>Nombre:</p>
+  <input type="text" [(ngModel)]="name">
+  <p>El nombre es: {{ name }}</p>
+</div>
+
+<h1>Ng if-else</h1>
+<h2 *ngIf="animal === 'dog'; else myBlock">Hola mundo</h2>
+<ng-template #myBlock>
+  <h2>
+    Good bye
+  </h2>
+</ng-template>
+
+<h1>Ng Switch</h1>
+<input type="text" [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Nicolas'">
+    La persona es: Nicolas
+  </p>
+  <p *ngSwitchCase="'Andrea'">
+    La persona es: Andrea
+  </p>
+  <p *ngSwitchCase="'Camilo'">
+    La persona es: Camilo
+  </p>
+  <p *ngSwitchDefault>
+    No hace match
+  </p>
+</div>
+
+<h1>Ng for</h1>
+<ul>
+  <li *ngFor="let fruit of fruits; index as i">
+    {{ i }}{{ fruit }}
+  </li>
+</ul>
+
+<app-panel></app-panel>
+<app-example></app-example>
