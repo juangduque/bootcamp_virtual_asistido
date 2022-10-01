@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeaderOptionsComponent } from './components/header-options/header-options.component';
+import { MainSectionComponent } from './components/main-section/main-section.component';
+import { BookCardComponent } from './components/book-card/book-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavBarComponent,
-    HeaderOptionsComponent
+    HeaderOptionsComponent,
+    MainSectionComponent,
+    BookCardComponent
   ],
   imports: [
     BrowserModule,
