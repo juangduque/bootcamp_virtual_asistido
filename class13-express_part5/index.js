@@ -14,6 +14,11 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 
+// Uncomment the following lines to enable cors policy but remember that generally is a bad practice
+// var cors = require('cors')
+
+// app.use(cors())
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => log.logMessage("Connected to the database"))
   .catch(error => log.logError(error));
