@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeaderOptionsComponent } from './components/header-options/header-options.component';
-import { MainSectionComponent } from './components/main-section/main-section.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SuggestedBooksComponent } from './pages/suggested-books/suggested-books.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { HeroComponent } from './components/hero/hero.component';
     HeaderComponent,
     NavBarComponent,
     HeaderOptionsComponent,
-    MainSectionComponent,
     BookCardComponent,
-    HeroComponent
+    HeroComponent,
+    HomeComponent,
+    SuggestedBooksComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

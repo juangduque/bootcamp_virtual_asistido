@@ -1,17 +1,17 @@
 <div class="bookCard">
   <div class="bookImage">
-    <img src="../../../assets/images/Image.png" alt="">
+    <img [src]="book.image" alt="Book image" onError="this.src='../../../assets/images/book-default.png'">
   </div>
   <div class="description">
     <div class="labels">
-      <h4 class="bookName">Titulo libro</h4>
-      <h4 class="bookPrice">$90.000</h4>
+      <h4 class="bookName">{{ book.title }}</h4>
+      <h4 class="bookPrice">{{ book.price | currency:"COP"}}</h4>
     </div>
     <div class="buttons">
       <button class="infoButton">
         <img src="../../../assets/logos/001-info 1.png" alt="">
       </button>
-      <button class="cartButton">
+      <button class="cartButton" (click)="onAddToCart()">
         <img src="../../../assets/logos/001-shopping-cart 1.png" alt="">
       </button>
     </div>

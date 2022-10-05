@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,9 +11,11 @@ export class HeroComponent implements OnInit {
 
   counter = 0;
 
-  constructor() { }
+  constructor(private storeService: StoreService) { }
 
   ngOnInit(): void {
-
+    this.storeService.myCart$.subscribe(books => {
+      this.counter = books.length;
+    })
   }
 }

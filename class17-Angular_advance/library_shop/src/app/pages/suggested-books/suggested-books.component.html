@@ -1,0 +1,6 @@
+<main>
+  <app-hero></app-hero>
+  <div class="booksCardContainer">
+    <app-book-card *ngFor="let book of books" [book]="book" (bookAdded)="onAddToShoppingCart($event)"></app-book-card>
+  </div>
+</main>
